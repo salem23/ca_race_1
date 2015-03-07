@@ -1,0 +1,409 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% 26/05/2010
+% edited by Bill Lampos
+%
+% Feel free to use (copy) the structure (latex formatting source code)
+% but not the content of this document.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\PassOptionsToPackage{table}{xcolor}
+\documentclass[compress]{beamer}
+\mode<presentation>
+\usepackage{etex}
+\usetheme{Madrid}
+% other themes: AnnArbor, Antibes, Bergen, Berkeley, Berlin, Boadilla, boxes, CambridgeUS, Copenhagen, Darmstadt, default, Dresden, Frankfurt, Goettingen,Warsaw   Berkeley Marburg
+% Hannover, Ilmenau, JuanLesPins, Luebeck, Madrid, Maloe, Marburg, Montpellier, PaloAlto, Pittsburg, Rochester, Singapore, Szeged, classic
+
+\setbeamertemplate{footline}[page number]{}
+
+%\makeatother
+%\setbeamertemplate{footline}
+%{
+%	\leavevmode%
+%	\hbox{%
+%		\begin{beamercolorbox}[wd=.4\paperwidth,ht=2.25ex,dp=1ex,center]{author in head/foot}%
+%			\usebeamerfont{author in head/foot}\insertshortauthor
+%		\end{beamercolorbox}%
+%		\begin{beamercolorbox}[wd=.6\paperwidth,ht=2.25ex,dp=1ex,center]{title in head/foot}%
+%			\usebeamerfont{title in head/foot}\insertshorttitle\hspace*{3em}
+%			\insertframenumber{} / \inserttotalframenumber\hspace*{1ex}
+%		\end{beamercolorbox}}%
+%		\vskip0pt%
+%	}
+%	\makeatletter
+\setbeamertemplate{navigation symbols}{}
+
+\usecolortheme{sidebartab}
+% color themes: albatross, beaver, beetle, crane, default, dolphin, dov, fly, lily, orchid, rose, seagull, seahorse, sidebartab, structure, whale, wolverine
+
+\usefonttheme{serif}
+% font themes: default, professionalfonts, serif, structurebold, structureitalicserif, structuresmallcapsserif
+
+% pdf is displayed in full screen mode automatically
+\hypersetup{pdfpagemode=FullScreen}
+
+% define your own colours:
+\definecolor{Red}{rgb}{1,0,0}
+\definecolor{Blue}{rgb}{0,0,1}
+\definecolor{Green}{rgb}{0,1,0}
+\definecolor{magenta}{rgb}{1,0,.6}
+\definecolor{lightblue}{rgb}{0,.5,1}
+\definecolor{lightpurple}{rgb}{.6,.4,1}
+\definecolor{gold}{rgb}{.6,.5,0}
+\definecolor{orange}{rgb}{1,0.4,0}
+\definecolor{hotpink}{rgb}{1,0,0.5}
+\definecolor{newcolor2}{rgb}{.5,.3,.5}
+\definecolor{newcolor}{rgb}{0,.3,1}
+\definecolor{newcolor3}{rgb}{1,0,.35}
+\definecolor{darkgreen1}{rgb}{0, .35, 0}
+\definecolor{darkgreen}{rgb}{0, .6, 0}
+\definecolor{darkred}{rgb}{.75,0,0}
+\definecolor{LightCyan}{rgb}{0.88,1,1}
+\xdefinecolor{olive}{cmyk}{0.64,0,0.95,0.4}
+\xdefinecolor{purpleish}{cmyk}{0.75,0.75,0,0}
+
+
+% \usepackage{beamerinnertheme_______}
+% inner themes include circles, default, inmargin, rectangles, rounded
+
+%\usepackage{beamerouterthemesmoothbars}
+% outer themes include default, infolines, miniframes, shadow, sidebar, smoothbars, smoothtree, split, tree
+
+\useoutertheme[subsection=false]{smoothbars}
+
+%\setbeamercolor{frametitle}{fg=magenta,bg=yellow!30}
+%\setbeamercolor{section in head/foot}{bg=blue!60}
+%\setbeamercolor{author in head/foot}{bg=Green}
+%\setbeamercolor{date in head/foot}{fg=Brown}
+
+
+
+% to have the same footer on all slides
+%\setbeamertemplate{footline}[text line]{xxx xxx xxx}
+%\setbeamertemplate{footline}[text line]{} % or empty footer
+%\usepackage[utf8]{inputenc}
+%\usepackage[T1]{fontenc}
+% include packages
+\usepackage{subfigure}
+\usepackage{multicol}
+\usepackage{amsmath}
+\usepackage{epsfig}
+\usepackage{graphicx}
+\usepackage[all,knot]{xy}
+\xyoption{arc}
+\usepackage{url}
+\usepackage{multimedia}
+\usepackage{hyperref}
+\usepackage{setspace}
+\usepackage{tikz}
+\usepackage{pgfplots}
+\usepackage{epsfig}
+\usepackage{epstopdf}
+%\usepackage{adjustbox}
+\usepackage{booktabs}
+\usepackage{anyfontsize}
+\usepackage{geometry}
+\usepackage{multirow}
+\usepackage{slashbox}
+
+\usepackage{xcolor,colortbl}
+
+
+
+\usetikzlibrary{mindmap,shadows}
+\usetikzlibrary{shapes,arrows}
+\usetikzlibrary{calc,patterns,snakes,decorations.pathmorphing,decorations.markings}
+\usetikzlibrary{positioning}
+
+%\usetikzlibrary{shapes.geometric,backgrounds,positioning-plus,node-families}
+\usetikzlibrary{plotmarks}
+
+\tikzset{
+	invisible/.style={opacity=0,text opacity=0},
+	visible on/.style={alt=#1{}{invisible}},
+	alt/.code args={<#1>#2#3}{%
+		\alt<#1>{\pgfkeysalso{#2}}{\pgfkeysalso{#3}} % \pgfkeysalso doesn't change the path
+	},
+}
+
+\usepackage{empheq}
+\usepackage[table]{xcolor}
+\usepackage[skins]{tcolorbox}
+
+\setbeamercolor{block title}{bg=red!30,fg=blue}%bg=background, fg= foreground
+\setbeamercolor{block body}{bg=green!40,fg=black}%bg=background, fg= foreground
+
+\setbeamerfont{section number projected}{%
+	family=\rmfamily,series=\bfseries,size=\normalsize}
+\setbeamercolor{section number projected}{bg=black,fg=yellow}
+
+\setbeamercolor{section in toc}{fg=red}
+%\setbeamercolor{section in toc}{fg=blue}
+
+
+\setbeamercolor{navigation symbols dimmed}{fg=red!80!black}
+\setbeamercolor{navigation symbols}{fg=red!80!black}
+
+%\institute{{\tiny \sffamily Soutenance de Doctorat en sciences}}
+\title{\textcolor{yellow!50!}{ \bf{\tt }}}
+%\subtitle{Tracking trends on the web using novel Machine Learning methods}
+
+
+\author{{SALEM Mohammed } \hfill {  }}
+%\institute{\tiny 
+%		}
+\date{\scriptsize D?partement d'Informatique\\ 05 F?vrier 2015}
+\newcommand\Section[2][]{%
+	\section<presentation>[#1]{#2}
+	\section<article>{#2}
+}
+
+%\setbeamercolor*{section in head/foot}{fg=white,bg=black}
+
+\newlength\figureheight 
+\newlength\figurewidth  
+\begin{document}
+	
+	
+	\frame[plain]{
+		\begin{center}
+			%\includegraphics[width=12cm,height=2cm]{figures/univ2} \\ 
+		\end{center}
+		\begin{center} \sffamily Car race controller based on evolutionnary trained radial basis function neural networks \end{center}
+		\begin{center} \textbf{March, 05, 2015} \end{center}
+		
+
+	}
+
+
+\frame{\frametitle{Aims}
+We will presents a controller for the 
+Simulated Car Racing. 
+
+We will start by training a neural based controller to drive alone in the track ( time trial).
+
+The second step is to learn to compete with other ddrivers.
+
+}
+\frame{\frametitle{Description of the available sensors}
+\scalebox{0.6}{
+				\begin{tabular}{|c||l|m{12cm}|}
+					\rowcolor{green!20}
+					\hline
+Name& Range(unit) & Description\\
+angle& $[-\pi,+\pi]$ (rad)&
+Angle between the car direction and the direction of the
+track axis.\\
+curLapTime &$[0,+\infty]$ (s) & Time elapsed during current lap.\\
+damage& $[0,+\infty]$ (point)&
+Current damage of the car (the higher is the value the higher
+is the damage).\\
+distFromStart& $[0,+\infty]$ (m) & Distance of the car from the start line along the track line.\\
+distRaced &$[0,+\infty]$ (m)& Distance covered by the car from the beginning of the race\\
+
+fuel& $[0,+\infty]$ (l) & Current fuel level.\\
+gear &-1,0,1,0..6 g & Current gear: -1 is reverse, 0 is neutral and the gear from
+1 to 6.\\
+lastLapTime &$[0,+\infty]$ (s)& Time to complete the last lap\\
+opponents&[0,200] (m)&
+Vector of 36 opponent sensors: each sensor covers a span
+of 10 degrees within a range of 200 meters and returns the
+distance of the closest opponent in the covered area. \\
+racePos & 1,2,..N&  Position in the race with respect to other cars.\\
+rpm & $[0,+\infty]$ (rpm) & Number of rotation per minute of the car engine.\\
+speedX & $[-\infty,+\infty]$  (km/h)& Speed of the car along the longitudinal axis of the car.\\
+speedY & $[-\infty,+\infty]$  (km/h)& Speed of the car along the transverse axis of the car.\\
+speedZ & $[-\infty,+\infty]$  (km/h)& Speed of the car along the Z axis of the car.\\
+	
+track & [0,200] (m)& 
+Vector of 19 range finder sensors: each sensors returns the
+distance between the track edge and the car within a range
+of 200 meters.\\	
+trackPos & $[-\infty,+\infty]$& 
+Distance between the car and the track axis. The value is
+normalized w.r.t to the track width: it is 0 when car is on
+the axis, -1 when the car is on the right edge of the track
+and +1 when it is on the left edge of the car. Values greater
+than 1 or smaller than -1 mean that the car is outside of
+the track.\\	
+%wheelSpinVel&  [0,+1] (rad/s)& 
+%Vector of 4 sensors representing the rotation speed of
+%wheels.\\	
+%z&  $[-\infty,+\infty]$ (m)&
+%Distance of the car mass center from the surface of the track
+%along the Z axis.\\			
+			
+				\hline		
+			
+		\end{tabular}
+}
+}
+
+
+	\frame{\frametitle{Description of the available effectors}
+		\scalebox{0.9}{
+			\begin{tabular}{|c||l|m{9cm}|}
+				\rowcolor{green!20}
+				\hline
+				Name& Range & Description\\
+accel& [0,1] &Virtual gas pedal (0 means no gas, 1 full gas).\\
+brake &[0,1]& Virtual brake pedal (0 means no brake, 1 full brake).\\
+clutch &[0,1]& Virtual clutch pedal (0 means no clutch, 1 full clutch).\\
+gear &-1,0,1,0..6& Gear value.\\
+steering &[-1,1]&
+Steering value: -1 and +1 means respectively full right and
+left, that corresponds to an angle of 0.366519 rad.\\
+focus &[-90,90] &Focus direction in degrees.\\
+meta & 0,1&
+This is meta-control command: 0 do nothing, 1 ask competition server to restart the race.\\
+				
+				\hline		
+				
+			\end{tabular}
+		}
+	}
+
+
+	\frame{\frametitle{Designing TORCS AI based controller}	
+		
+		\begin{itemize}
+			\item High level control\\
+			use information from the sensors to predict the trajectory in the next segment of the track ( with scripted driving policy to compute next gear , accel cluch and steering). This is could be done either by collecting data from the warm lap with low speed or adding a new sensor to get ahead information about the track as in \\
+	\textbf	{L. Cardamone, D. Loiacono, and P. Lanzi, ?Learning drivers for
+			TORCS through imitation using supervised methods,? in Proceedings
+			of the 5th international conference on Computational Intelligence and
+			Games. IEEE Press, 2009, pp. 148?155.	}
+			\item Low level control : predict actions of the car directly(ifficult in case of noise).
+			
+		\end{itemize}
+	}	
+
+
+
+
+
+	\frame{\frametitle{Designing indirect human-like controller}	
+
+	\begin{columns}[T] % align columns
+		\begin{column}{.49\textwidth}
+			%	\color{red}\rule{\linewidth}{4pt}
+			\begin{block}{ RBF neural network Inputs:}
+\begin{itemize}
+	\item angle 
+	\item gear
+	\item distRaced
+	\item lastLapTime	
+	\item speedX
+	\item speedY
+	\item  focus
+\end{itemize}
+			\end{block}
+		\end{column}%
+		\hfill%
+		\begin{column}{.49\textwidth}
+			%	\color{blue}\rule{\linewidth}{4pt}
+			
+			\begin{block}{ RBF neural network Outputs}
+\begin{itemize}
+	\item targetspeed 
+	\item targetposition
+\end{itemize}
+				
+			\end{block}
+		\end{column}%
+	\end{columns}
+	\vspace{0.5cm}
+
+}
+
+
+	\frame{\frametitle{Designing indirect human-like controller}	
+
+\begin{itemize}
+\item Train the RBFNN with GA.
+\item Hidden neurons number: Trial /error.\\
+\item  Driving policy is used to compute the desired steer, gear acel and cluch to move the car from the currentpos and currspeed to target position and speed.\\
+\item  $Fitness= \sum{(targetpos-currpos)}^2$
+
+\item  Another way is to collect data from some tracks in the TORCS and train the RBFNN with BP or another training algorithm.	
+\end{itemize}
+
+
+}	
+	
+	
+	
+		\frame{\frametitle{Designing direct human-like controller}	
+			
+			\begin{columns}[T] % align columns
+				\begin{column}{.49\textwidth}
+					%	\color{red}\rule{\linewidth}{4pt}
+					\begin{block}{ RBF neural network Inputs:}
+						\begin{itemize}
+							\item angle 
+							\item focus 
+							\item damage
+							\item distRaced
+							\item fuel 
+							\item gear 
+							\item lastLapTime	
+							\item rpm
+							\item speedX
+							\item speedY
+							\item track
+							\item wheelSpinVel
+							\item  focus
+						\end{itemize}
+					\end{block}
+				\end{column}%
+				\hfill%
+				\begin{column}{.49\textwidth}
+					%	\color{blue}\rule{\linewidth}{4pt}
+					
+					\begin{block}{ RBF neural network Outputs}
+						\begin{itemize}
+							\item accel 
+							\item brake 
+							\item clutch 
+							\item gear 
+							\item steering 
+							\item focus	
+						\end{itemize}
+						
+					\end{block}
+				\end{column}%
+			\end{columns}
+			
+		}
+		
+		
+		\frame{\frametitle{Designing direct human-like controller}	
+			
+			\begin{itemize}
+				\item Hidden neurons number: Trial /error.\\
+				\item Train the RBFNN by a genetic algorithm.\\
+				\item Chromosome=[angle, currlapt, distFromStart,distRaced, fuel, gear, lastLapTime, rpm ]\\
+				
+			\end{itemize}
+			
+			\begin{enumerate}
+				\item Fitness1:
+				\begin{equation}
+				f_{g}= a*damage+b*fuel+c*lastLapTime+d*currlapt+e*angle
+				\end{equation}
+				\item  Fitness2:
+				\begin{equation}
+				f_{g}= (1-e^{\beta})(currlapt+angle)+e^{\beta}(damage+fuel)
+				\end{equation}
+				\item  
+				Fitness3:
+				a fitness for each 20ms of the race ( well position the car in the track)
+				and a global function ( sum of ladtlaps time or points accorded to the controller)
+				\begin{equation}
+				f_{g}= (1-e^{\beta})(currlapt+angle)+e^{\beta}(damage+fuel)
+				\end{equation}
+			\end{enumerate}	
+		}	
+		
+\end{document} 
